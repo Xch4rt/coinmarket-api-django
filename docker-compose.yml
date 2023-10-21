@@ -4,9 +4,9 @@ services:
     image: postgres:latest
     container_name: currency_db_container
     environment:
-      POSTGRES_USER: xchart
-      POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: currency_db
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
